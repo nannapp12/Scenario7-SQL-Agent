@@ -29,6 +29,8 @@ def run(task: str) -> None:
                 for block in event.content:
                     if block.type == "text":
                         print(block.text, end="", flush=True)
+            elif event.type == "agent.tool_use":
+                print(f"\n[Using tool: {event.name}]")
             elif event.type == "session.status_terminated":
                 print("\n--- session terminated ---")
                 break
