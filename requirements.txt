@@ -1,0 +1,6 @@
+anthropic>=1.12
+psycopg[binary]>=3.2
+sqlglot>=26
+python-dotenv>=1.0
+tabulate>=0.9
+pytest>=8

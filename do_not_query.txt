@@ -1,0 +1,10 @@
+# Tables the SQL agent must never query. One entry per line.
+#   table_name       -> blocked in every schema
+#   schema.table     -> blocked in that schema only
+#   schema.*         -> every table in that schema
+# Lines starting with # are comments.
+
+# Example entries -- replace with your own:
+users_credentials
+public.payroll
+audit.*

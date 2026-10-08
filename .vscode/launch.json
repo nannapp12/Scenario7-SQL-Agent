@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "SQL Agent (interactive)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "sql_agent",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "SQL Agent (one question)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "sql_agent",
+      "args": ["${input:question}"],
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "question",
+      "type": "promptString",
+      "description": "What do you want to know about your data?"
+    }
+  ]
+}
